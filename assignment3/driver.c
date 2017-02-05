@@ -16,6 +16,8 @@ int main(int argc, char** argv){
     printBoard(test);
     getPosition(&row, &col, test);
     printf("Position given: %d, %d\n", row, col);
+    flipTile(&test, row, col);
+    printBoard(test);
 
     deallocateBoard(&test);
 

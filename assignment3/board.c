@@ -106,3 +106,39 @@ void printBoard(board game_board){
         printf("\n");
     }
 }
+
+/*
+    Takes the next turn for the board.
+
+    Params:
+    - board *game_board: The game board in question, passed
+      by reference.
+*/
+void takeTurn(board *game_board){
+
+}
+
+/*
+    Flips the tile on the passed board at the given position.
+    Black becomes white, white becomes black. Blank tiles are
+    unaffected.
+
+    Params:
+    - board *game_board: The game board in question, passed by
+      reference.
+    - int row: The row of the tile to flip.
+    - int col: The column of the tile to flip.
+*/
+void flipTile(board *game_board, int row, int col){
+    // Get the tile in question
+    color *tile = &(*game_board).tiles[row][col];
+    printf("TILE VAL START: %c\n", *tile);
+
+    // Flip the tile - nothing happens if blank
+    if ((char) *tile == WHITE)
+        *tile = BLACK;
+    else if ((char) *tile == BLACK)
+        *tile = WHITE;
+
+    printf("TILE VAL AFTER: %c\n", *tile);
+}

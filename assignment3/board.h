@@ -7,6 +7,9 @@ typedef enum {BLANK = '.', BLACK = 'B', WHITE = 'W'} color;
 // Declare the players
 typedef enum {P1, P2} players;
 
+// Declare the directions for traversing the board
+typedef enum {N, NE, E, SE, S, SW, W, NW} direction;
+
 // Declare the board struct
 typedef struct board {
     // Board contents represented as a matrix of tiles
@@ -29,5 +32,12 @@ void deallocateBoard(board *game_board);
 
 // Prints out the board's contents
 void printBoard(board game_board);
+
+// Take a turn, based on the 'turn' and 'tiles'
+// value of the passed board.
+void takeTurn(board *game_board);
+
+// Flips the tile at the marked position on the passed board.
+void flipTile(board *game_board, int row, int col);
 
 #endif // BOARD_H_
