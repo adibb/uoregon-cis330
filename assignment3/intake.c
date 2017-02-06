@@ -30,15 +30,10 @@ int getGameSize(){
     Params:
     - int *row: An integer to house the returned row value.
     - int *col: An integer to house the returned column value.
-    - board game_board: The board the game is being played
-      on. Its size and the current state of the tiles and
-      turn dictate which positions are valid or not.
 
-    NOTE: This function only sanitizes the returned value to
-    be a blank tile somewhere actually on the board. It
-    doesn't check for whether that tile is a valid one to play.
+    NOTE: This function only acquires two single digit values.
 */
-void getPosition(int *row, int *col, board game_board){
+void getPosition(int *row, int *col){
     int valid = 0;
     char line[BUFFER_SIZE];
 
@@ -57,9 +52,6 @@ void getPosition(int *row, int *col, board game_board){
           character of the line and a nextline character in the fourth
         - be within the board, so 0 <= row and col < game_size
         */
-        valid = (line[1] == ' ') &&
-                (line[3] == '\n') &&
-                (*row < game_board.game_size) && (*row >= 0) &&
-                (*col < game_board.game_size) && (*col >= 0);
+        valid = (line[1] == ' ') && (line[3] == '\n');
     }
 }

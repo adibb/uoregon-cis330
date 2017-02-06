@@ -5,21 +5,27 @@
 
 int main(int argc, char** argv){
     int game_size;
-    int row, col;
-    board test;
+    board playing_field;
 
     game_size = getGameSize();
 
-    allocateBoard(&test, game_size);
-    initBoard(&test, game_size);
+    allocateBoard(&playing_field, game_size);
+    initBoard(&playing_field, game_size);
 
-    printBoard(test);
-    getPosition(&row, &col, test);
-    printf("Position given: %d, %d\n", row, col);
-    flipTile(&test, row, col);
-    printBoard(test);
+    while (!gameOver(playing_field)){
+        printBoard(playing_field);
+        takeTurn(&playing_field);
+    }
+    printBoard(playing_field);
 
-    deallocateBoard(&test);
+    if (playing_field.score_p1 > playing_field.score_p2)
+        printf("WINNER: PLAYER 1!\n");
+    else if (playing_field.score_p2 > playing_field.score_p1)
+        printf("WINNER: PLAYER 2!\n");
+    else
+        printf("Wait, a tie? Really?\n");
+
+    deallocateBoard(&playing_field);
 
     return 0;
 }
