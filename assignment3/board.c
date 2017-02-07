@@ -264,7 +264,8 @@ int flank(board *game_board,
     if (row < (*game_board).game_size
         && col < (*game_board).game_size
         && row >= 0
-        && col >= 0)
+        && col >= 0
+        && ((char) (*game_board).tiles[row][col]) != BLANK)
     {
         // Flank is sane. Check if we've finished the flank, or need
         // to continue on
@@ -325,17 +326,17 @@ int flank(board *game_board,
 */
 int gameOver(board game_board){
     int i, j;
-    int empty = 0;
+    int full = 1;
 
     int max = game_board.game_size;
     for (i = 0; i < max; i++){
         for (j = 0; j < max; j++){
-            if (game_board.tiles[i][j] == BLANK)
-                empty = 1;
+            if ((char) game_board.tiles[i][j] == BLANK)
+                full = 0;
         }
     }
 
-    return (empty
+    return (full
             || game_board.score_p1 == 0
             || game_board.score_p2 == 0);
 }
