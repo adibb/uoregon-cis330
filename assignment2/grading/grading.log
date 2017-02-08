@@ -594,4 +594,335 @@ PASS
 Points: {'log': '\n====================> Dibb, Alex J ; 792PASS\n-----<< Problem 1: >>------\n[2017-02-04 18:55:16.512198] gcc -std=c99 -c triangle1.c\nInputs: \nSTDOUT:\n\nSTDERR:\nPASS\nComparing against master output:\n[2017-02-04 18:55:16.609906] diff -y -B -b triangle1.output triangle1.master\nInputs: \nSTDOUT:\n\t\t\t\t\t\t\t      >\tProblem 1 (a triangle of height 5):\n\t\t\t\t\t\t\t      >\t          0 \n\t\t\t\t\t\t\t      >\t        0 1 2 \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4 \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6 \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\nSTDERR:\n\n-----<< Problem 1: >>------\n[2017-02-04 18:55:16.644474] numdiffs=`diff  -B -b triangle1.output triangle1.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASSPASS\n-----<< Problem 2: >>------\n[2017-02-04 18:55:16.722580] gcc -std=c99 -c triangle2.c\nInputs: \nSTDOUT:\n\nSTDERR:\nPASS\n-----<< Problem 2: >>------\n[2017-02-04 18:55:16.827920] ./test-triangle2\nInputs: abc\n5\n\nSTDOUT:\n\nSTDERR:\nSegmentation fault (core dumped)\n\nComparing against master output:\n[2017-02-04 18:55:17.053621] diff -y -B -b triangle2.output triangle2.master\nInputs: \nSTDOUT:\n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\n\t\t\t\t\t\t\t      >\tPlease enter the height of the triangle [1-5]: Please enter t\n\t\t\t\t\t\t\t      >\t      0 1 2     \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4   \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 \n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\n\t\t\t\t\t\t\t      >\tPlease enter the height of the triangle [1-5]: Please enter t\n\t\t\t\t\t\t\t      >\t        0 1 2       \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4     \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6   \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\n\t\t\t\t\t\t\t      >\tPlease enter the height of the triangle [1-5]: Please enter t\n\t\t\t\t\t\t\t      >\t        0 1 2       \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4     \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6   \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\nSTDERR:\n\n-----<< Problem 2: >>------\n[2017-02-04 18:55:17.087631] numdiffs=`diff  -B -b triangle2.output triangle2.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASS\n-----<< Problem 2-test: >>------\n[2017-02-04 18:55:17.150519] gcc -std=c99 -c test.c\nInputs: \nSTDOUT:\n\nSTDERR:\nPASS\n-----<< Problem 2-test: >>------\n[2017-02-04 18:55:17.238744] ./test\nInputs: 0\n4\n\nSTDOUT:\nPlease enter the height of the triangle [1-5]: Please enter the height of the triangle [1-5]:       0       \n    0 1 2     \n  0 1 2 3 4   \n0 1 2 3 4 5 6 \n\nSTDERR:\n\nComparing against master output:\n[2017-02-04 18:55:17.282100] diff -y -B -b test.output test.master\nInputs: \nSTDOUT:\n\t\t\t\t\t\t\t      >\tProblem 1 (a triangle of height 5):\n\t\t\t\t\t\t\t      >\t          0 \n\t\t\t\t\t\t\t      >\t        0 1 2 \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4 \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6 \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\nPlease enter the height of the triangle [1-5]: Please enter t\tPlease enter the height of the triangle [1-5]: Please enter t\n    0 1 2     \t\t\t\t\t\t\t      0 1 2     \n  0 1 2 3 4   \t\t\t\t\t\t\t    0 1 2 3 4   \n0 1 2 3 4 5 6 \t\t\t\t\t\t      |\t  0 1 2 3 4 5 6 \n\nSTDERR:\n\n-----<< Problem 2-test: >>------\n[2017-02-04 18:55:17.315651] numdiffs=`diff  -B -b test.output test.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASS\n-----<< Problem 3: >>------\n[2017-02-04 18:55:17.375551] gcc -std=c99 -c mountain.c\nInputs: \nSTDOUT:\n\nSTDERR:\nPASS\n-----<< Problem 3: >>------\n[2017-02-04 18:55:17.500041] ./mountain\nInputs: 5\n3 2 4 1 5\n\nSTDOUT:\nPlease enter the number of peaks [1-5]: Please enter the peak heights [1-5, single space separated]: \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n\nSTDERR:\n\nComparing against master output:\n[2017-02-04 18:55:17.542308] diff -y -B -b mountain.output mountain.master\nInputs: \nSTDOUT:\nPlease enter the number of peaks [1-5]: Please enter the peak |\tPlease enter the number of peaks [1-5]: Please enter the heig\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      |\t                      0               0 1 2                 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      |\t    0               0 1 2           0 1 2 3 4               \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      |\t  0 1 2     0     0 1 2 3 4       0 1 2 3 4 5 6             \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      |\t0 1 2 3 4 0 1 2 0 1 2 3 4 5 6 0 0 1 2 3 4 5 6 7 8           \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n\nSTDERR:\n\n-----<< Problem 3: >>------\n[2017-02-04 18:55:17.577130] numdiffs=`diff  -B -b mountain.output mountain.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASS\n-----<< Problem 4: >>------\n[2017-02-04 18:55:17.646659] gcc -std=c99 -c main.c\nInputs: \nSTDOUT:\n\nSTDERR:\nmain.c: In function \xe2\x80\x98main\xe2\x80\x99:\nmain.c:41:49: warning: passing argument 2 of \xe2\x80\x98deallocateNumberTriangle\xe2\x80\x99 from incompatible pointer type [-Wincompatible-pointer-types]\n   deallocateNumberTriangle( (const int) height, triangle );\n                                                 ^\nIn file included from main.c:5:0:\ntriangle.h:17:6: note: expected \xe2\x80\x98int ***\xe2\x80\x99 but argument is of type \xe2\x80\x98int **\xe2\x80\x99\n void deallocateNumberTriangle(const int height, int ***triangle);\n      ^\nPASS\n-----<< Problem 4: >>------\n[2017-02-04 18:55:17.744373] ./main\nInputs: 3\n\nSTDOUT:\n\nSTDERR:\nSegmentation fault (core dumped)\n\nComparing against master output:\n[2017-02-04 18:55:17.965401] diff -y -B -b main.output main.master\nInputs: \nSTDOUT:\n\t\t\t\t\t\t\t      >\tProblem 1 (a triangle of height 5):\n\t\t\t\t\t\t\t      >\t          0 \n\t\t\t\t\t\t\t      >\t        0 1 2 \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4 \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6 \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\n\t\t\t\t\t\t\t      >\tPlease enter the height of the triangle [1-5]:         0     \n\t\t\t\t\t\t\t      >\t      0 1 2     \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4   \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 \n\nSTDERR:\n\n-----<< Problem 4: >>------\n[2017-02-04 18:55:18.002265] numdiffs=`diff  -B -b main.output main.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASS', 'name': 'Dibb, Alex J', '1': [5, 0, 5], '3': [15, 0, 15], '2': [10, 0, 10], '5': [0, 0, 0], '2-test': [5, 0, 5], '4': [5, 0, 5]}
 ENDSTUDENT Dibb, Alex J
 
+====================> Eldemir, Alex C ; 1679/bin/cp /cs/groupprojects/cis330/assignments/assignment2/master/g_Makefile . > /dev/null 2>&1/bin/cp /cs/groupprojects/cis330/assignments/assignment2/master/main.c . > /dev/null 2>&1/bin/cp /cs/groupprojects/cis330/assignments/assignment2/master/test-triangle1.c . > /dev/null 2>&1/bin/cp /cs/groupprojects/cis330/assignments/assignment2/master/test-triangle2.c . > /dev/null 2>&1PASS
+-----<< Problem 1: >>------
+[2017-02-08 08:45:43.474649] gcc -std=c99 -c triangle1.c
+Inputs: 
+STDOUT:
+
+STDERR:
+PASS
+-----<< Problem 1: >>------
+[2017-02-08 08:45:43.568491] /bin/rm -f test-triangle1 *.o && make -f g_Makefile test-triangle1
+Inputs: 
+STDOUT:
+gcc -c -std=c99 -g test-triangle1.c
+gcc -c -std=c99 -g triangle1.c
+gcc -o test-triangle1 test-triangle1.o triangle1.o -lm
+
+STDERR:
+
+Comparing against master output:
+[2017-02-08 08:45:43.765551] diff -y -B -b triangle1.output triangle1.master
+Inputs: 
+STDOUT:
+							      >	Problem 1 (a triangle of height 5):
+							      >	          0 
+							      >	        0 1 2 
+							      >	      0 1 2 3 4 
+							      >	    0 1 2 3 4 5 6 
+							      >	  0 1 2 3 4 5 6 7 8 
+
+STDERR:
+
+-----<< Problem 1: >>------
+[2017-02-08 08:45:43.799235] numdiffs=`diff  -B -b triangle1.output triangle1.master | wc -l`
+Inputs: 
+STDOUT:
+
+STDERR:
+Found 0 differences (within acceptable tolerance)
+PASSPASS
+-----<< Problem 2: >>------
+[2017-02-08 08:45:43.880880] gcc -std=c99 -c triangle2.c
+Inputs: 
+STDOUT:
+
+STDERR:
+PASS
+-----<< Problem 2: >>------
+[2017-02-08 08:45:43.984521] /bin/rm -f test-triangle2 *.o && make -f g_Makefile test-triangle2
+Inputs: 
+STDOUT:
+gcc -c -std=c99 -g test-triangle2.c
+gcc -c -std=c99 -g triangle2.c
+gcc -o test-triangle2 test-triangle2.o triangle2.o -lm
+
+STDERR:
+test-triangle2.c: In function ‘main’:
+test-triangle2.c:37:49: warning: passing argument 2 of ‘deallocateNumberTriangle’ from incompatible pointer type [-Wincompatible-pointer-types]
+   deallocateNumberTriangle( (const int) height, triangle );
+                                                 ^
+In file included from test-triangle2.c:5:0:
+triangle.h:17:6: note: expected ‘int ***’ but argument is of type ‘int **’
+ void deallocateNumberTriangle(const int height, int ***triangle);
+      ^
+
+-----<< Problem 2: >>------
+[2017-02-08 08:45:44.212169] ./test-triangle2
+Inputs: abc
+5
+
+STDOUT:
+
+STDERR:
+Segmentation fault (core dumped)
+
+Comparing against master output:
+[2017-02-08 08:45:44.443111] diff -y -B -b triangle2.output triangle2.master
+Inputs: 
+STDOUT:
+							      >
+							      >	Problem 2:
+							      >	Please enter the height of the triangle [1-5]: Please enter t
+							      >	      0 1 2     
+							      >	    0 1 2 3 4   
+							      >	  0 1 2 3 4 5 6 
+							      >
+							      >	Problem 2:
+							      >	Please enter the height of the triangle [1-5]: Please enter t
+							      >	        0 1 2       
+							      >	      0 1 2 3 4     
+							      >	    0 1 2 3 4 5 6   
+							      >	  0 1 2 3 4 5 6 7 8 
+							      >
+							      >	Problem 2:
+							      >	Please enter the height of the triangle [1-5]: Please enter t
+							      >	        0 1 2       
+							      >	      0 1 2 3 4     
+							      >	    0 1 2 3 4 5 6   
+							      >	  0 1 2 3 4 5 6 7 8 
+
+STDERR:
+
+-----<< Problem 2: >>------
+[2017-02-08 08:45:44.481034] numdiffs=`diff  -B -b triangle2.output triangle2.master | wc -l`
+Inputs: 
+STDOUT:
+
+STDERR:
+Found 0 differences (within acceptable tolerance)
+PASS
+-----<< Problem 2-test: >>------
+[2017-02-08 08:45:44.546284] gcc -std=c99 -c test.c
+Inputs: 
+STDOUT:
+
+STDERR:
+PASS
+-----<< Problem 2-test: >>------
+[2017-02-08 08:45:44.641787] /bin/rm -f test *.o && make -f g_Makefile test
+Inputs: 
+STDOUT:
+gcc -c -std=c99 -g test.c
+gcc -c -std=c99 -g triangle1.c
+gcc -c -std=c99 -g triangle2.c
+gcc -o test test.o triangle1.o triangle2.o -lm
+
+STDERR:
+
+-----<< Problem 2-test: >>------
+[2017-02-08 08:45:44.911597] ./test
+Inputs: 0
+4
+
+STDOUT:
+Please enter the height of the triangle [1-5]: Please enter the height of the triangle [1-5]:       0       
+    0 1 2     
+  0 1 2 3 4   
+0 1 2 3 4 5 6 
+
+STDERR:
+
+Comparing against master output:
+[2017-02-08 08:45:44.952655] diff -y -B -b test.output test.master
+Inputs: 
+STDOUT:
+							      >	Problem 1 (a triangle of height 5):
+							      >	          0 
+							      >	        0 1 2 
+							      >	      0 1 2 3 4 
+							      >	    0 1 2 3 4 5 6 
+							      >	  0 1 2 3 4 5 6 7 8 
+							      >
+							      >	Problem 2:
+Please enter the height of the triangle [1-5]: Please enter t	Please enter the height of the triangle [1-5]: Please enter t
+    0 1 2     							      0 1 2     
+  0 1 2 3 4   							    0 1 2 3 4   
+0 1 2 3 4 5 6 						      |	  0 1 2 3 4 5 6 
+
+STDERR:
+
+-----<< Problem 2-test: >>------
+[2017-02-08 08:45:44.991113] numdiffs=`diff  -B -b test.output test.master | wc -l`
+Inputs: 
+STDOUT:
+
+STDERR:
+Found 0 differences (within acceptable tolerance)
+PASS
+-----<< Problem 3: >>------
+[2017-02-08 08:45:45.060554] gcc -std=c99 -c mountain.c
+Inputs: 
+STDOUT:
+
+STDERR:
+PASS
+-----<< Problem 3: >>------
+[2017-02-08 08:45:45.160663] /bin/rm -f mountain *.o && make -f g_Makefile mountain
+Inputs: 
+STDOUT:
+gcc -o mountain mountain.c -lm
+
+STDERR:
+
+-----<< Problem 3: >>------
+[2017-02-08 08:45:45.317721] ./mountain
+Inputs: 5
+3 2 4 1 5
+
+STDOUT:
+Please enter the number of peaks [1-5]: Please enter the peak heights [1-5, single space separated]: 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+
+STDERR:
+
+Comparing against master output:
+[2017-02-08 08:45:45.361361] diff -y -B -b mountain.output mountain.master
+Inputs: 
+STDOUT:
+Please enter the number of peaks [1-5]: Please enter the peak |	Please enter the number of peaks [1-5]: Please enter the heig
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 	      |	                      0               0 1 2                 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 	      |	    0               0 1 2           0 1 2 3 4               
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 	      |	  0 1 2     0     0 1 2 3 4       0 1 2 3 4 5 6             
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 	      |	0 1 2 3 4 0 1 2 0 1 2 3 4 5 6 0 0 1 2 3 4 5 6 7 8           
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 	      <
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 	      <
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 	      <
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 	      <
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 	      <
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 	      <
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 	      <
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 	      <
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 	      <
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 	      <
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 	      <
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 	      <
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 	      <
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 	      <
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 	      <
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 	      <
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 	      <
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 	      <
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 	      <
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 	      <
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 	      <
+
+STDERR:
+
+-----<< Problem 3: >>------
+[2017-02-08 08:45:45.396822] numdiffs=`diff  -B -b mountain.output mountain.master | wc -l`
+Inputs: 
+STDOUT:
+
+STDERR:
+Found 0 differences (within acceptable tolerance)
+PASS
+-----<< Problem 4: >>------
+[2017-02-08 08:45:45.472302] gcc -std=c99 -c main.c
+Inputs: 
+STDOUT:
+
+STDERR:
+main.c: In function ‘main’:
+main.c:41:49: warning: passing argument 2 of ‘deallocateNumberTriangle’ from incompatible pointer type [-Wincompatible-pointer-types]
+   deallocateNumberTriangle( (const int) height, triangle );
+                                                 ^
+In file included from main.c:5:0:
+triangle.h:17:6: note: expected ‘int ***’ but argument is of type ‘int **’
+ void deallocateNumberTriangle(const int height, int ***triangle);
+      ^
+PASS
+-----<< Problem 4: >>------
+[2017-02-08 08:45:45.562081] /bin/rm -f main *.o && make -f g_Makefile main
+Inputs: 
+STDOUT:
+gcc -c -std=c99 -g triangle1.c
+gcc -c -std=c99 -g triangle2.c
+gcc -c -std=c99 -g main.c
+gcc -o main triangle1.o triangle2.o main.o
+
+STDERR:
+main.c: In function ‘main’:
+main.c:41:49: warning: passing argument 2 of ‘deallocateNumberTriangle’ from incompatible pointer type [-Wincompatible-pointer-types]
+   deallocateNumberTriangle( (const int) height, triangle );
+                                                 ^
+In file included from main.c:5:0:
+triangle.h:17:6: note: expected ‘int ***’ but argument is of type ‘int **’
+ void deallocateNumberTriangle(const int height, int ***triangle);
+      ^
+
+-----<< Problem 4: >>------
+[2017-02-08 08:45:45.814931] ./main
+Inputs: 3
+
+STDOUT:
+
+STDERR:
+Segmentation fault (core dumped)
+
+Comparing against master output:
+[2017-02-08 08:45:46.037044] diff -y -B -b main.output main.master
+Inputs: 
+STDOUT:
+							      >	Problem 1 (a triangle of height 5):
+							      >	          0 
+							      >	        0 1 2 
+							      >	      0 1 2 3 4 
+							      >	    0 1 2 3 4 5 6 
+							      >	  0 1 2 3 4 5 6 7 8 
+							      >
+							      >	Problem 2:
+							      >	Please enter the height of the triangle [1-5]:         0     
+							      >	      0 1 2     
+							      >	    0 1 2 3 4   
+							      >	  0 1 2 3 4 5 6 
+
+STDERR:
+
+-----<< Problem 4: >>------
+[2017-02-08 08:45:46.071087] numdiffs=`diff  -B -b main.output main.master | wc -l`
+Inputs: 
+STDOUT:
+
+STDERR:
+Found 0 differences (within acceptable tolerance)
+PASS
+Points: {'log': '\n====================> Dibb, Alex J ; 792/bin/cp /cs/groupprojects/cis330/assignments/assignment2/master/g_Makefile . > /dev/null 2>&1/bin/cp /cs/groupprojects/cis330/assignments/assignment2/master/main.c . > /dev/null 2>&1/bin/cp /cs/groupprojects/cis330/assignments/assignment2/master/test-triangle1.c . > /dev/null 2>&1/bin/cp /cs/groupprojects/cis330/assignments/assignment2/master/test-triangle2.c . > /dev/null 2>&1PASS\n-----<< Problem 1: >>------\n[2017-02-08 08:45:43.474649] gcc -std=c99 -c triangle1.c\nInputs: \nSTDOUT:\n\nSTDERR:\nPASS\n-----<< Problem 1: >>------\n[2017-02-08 08:45:43.568491] /bin/rm -f test-triangle1 *.o && make -f g_Makefile test-triangle1\nInputs: \nSTDOUT:\ngcc -c -std=c99 -g test-triangle1.c\ngcc -c -std=c99 -g triangle1.c\ngcc -o test-triangle1 test-triangle1.o triangle1.o -lm\n\nSTDERR:\n\nComparing against master output:\n[2017-02-08 08:45:43.765551] diff -y -B -b triangle1.output triangle1.master\nInputs: \nSTDOUT:\n\t\t\t\t\t\t\t      >\tProblem 1 (a triangle of height 5):\n\t\t\t\t\t\t\t      >\t          0 \n\t\t\t\t\t\t\t      >\t        0 1 2 \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4 \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6 \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\nSTDERR:\n\n-----<< Problem 1: >>------\n[2017-02-08 08:45:43.799235] numdiffs=`diff  -B -b triangle1.output triangle1.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASSPASS\n-----<< Problem 2: >>------\n[2017-02-08 08:45:43.880880] gcc -std=c99 -c triangle2.c\nInputs: \nSTDOUT:\n\nSTDERR:\nPASS\n-----<< Problem 2: >>------\n[2017-02-08 08:45:43.984521] /bin/rm -f test-triangle2 *.o && make -f g_Makefile test-triangle2\nInputs: \nSTDOUT:\ngcc -c -std=c99 -g test-triangle2.c\ngcc -c -std=c99 -g triangle2.c\ngcc -o test-triangle2 test-triangle2.o triangle2.o -lm\n\nSTDERR:\ntest-triangle2.c: In function \xe2\x80\x98main\xe2\x80\x99:\ntest-triangle2.c:37:49: warning: passing argument 2 of \xe2\x80\x98deallocateNumberTriangle\xe2\x80\x99 from incompatible pointer type [-Wincompatible-pointer-types]\n   deallocateNumberTriangle( (const int) height, triangle );\n                                                 ^\nIn file included from test-triangle2.c:5:0:\ntriangle.h:17:6: note: expected \xe2\x80\x98int ***\xe2\x80\x99 but argument is of type \xe2\x80\x98int **\xe2\x80\x99\n void deallocateNumberTriangle(const int height, int ***triangle);\n      ^\n\n-----<< Problem 2: >>------\n[2017-02-08 08:45:44.212169] ./test-triangle2\nInputs: abc\n5\n\nSTDOUT:\n\nSTDERR:\nSegmentation fault (core dumped)\n\nComparing against master output:\n[2017-02-08 08:45:44.443111] diff -y -B -b triangle2.output triangle2.master\nInputs: \nSTDOUT:\n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\n\t\t\t\t\t\t\t      >\tPlease enter the height of the triangle [1-5]: Please enter t\n\t\t\t\t\t\t\t      >\t      0 1 2     \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4   \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 \n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\n\t\t\t\t\t\t\t      >\tPlease enter the height of the triangle [1-5]: Please enter t\n\t\t\t\t\t\t\t      >\t        0 1 2       \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4     \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6   \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\n\t\t\t\t\t\t\t      >\tPlease enter the height of the triangle [1-5]: Please enter t\n\t\t\t\t\t\t\t      >\t        0 1 2       \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4     \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6   \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\nSTDERR:\n\n-----<< Problem 2: >>------\n[2017-02-08 08:45:44.481034] numdiffs=`diff  -B -b triangle2.output triangle2.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASS\n-----<< Problem 2-test: >>------\n[2017-02-08 08:45:44.546284] gcc -std=c99 -c test.c\nInputs: \nSTDOUT:\n\nSTDERR:\nPASS\n-----<< Problem 2-test: >>------\n[2017-02-08 08:45:44.641787] /bin/rm -f test *.o && make -f g_Makefile test\nInputs: \nSTDOUT:\ngcc -c -std=c99 -g test.c\ngcc -c -std=c99 -g triangle1.c\ngcc -c -std=c99 -g triangle2.c\ngcc -o test test.o triangle1.o triangle2.o -lm\n\nSTDERR:\n\n-----<< Problem 2-test: >>------\n[2017-02-08 08:45:44.911597] ./test\nInputs: 0\n4\n\nSTDOUT:\nPlease enter the height of the triangle [1-5]: Please enter the height of the triangle [1-5]:       0       \n    0 1 2     \n  0 1 2 3 4   \n0 1 2 3 4 5 6 \n\nSTDERR:\n\nComparing against master output:\n[2017-02-08 08:45:44.952655] diff -y -B -b test.output test.master\nInputs: \nSTDOUT:\n\t\t\t\t\t\t\t      >\tProblem 1 (a triangle of height 5):\n\t\t\t\t\t\t\t      >\t          0 \n\t\t\t\t\t\t\t      >\t        0 1 2 \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4 \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6 \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\nPlease enter the height of the triangle [1-5]: Please enter t\tPlease enter the height of the triangle [1-5]: Please enter t\n    0 1 2     \t\t\t\t\t\t\t      0 1 2     \n  0 1 2 3 4   \t\t\t\t\t\t\t    0 1 2 3 4   \n0 1 2 3 4 5 6 \t\t\t\t\t\t      |\t  0 1 2 3 4 5 6 \n\nSTDERR:\n\n-----<< Problem 2-test: >>------\n[2017-02-08 08:45:44.991113] numdiffs=`diff  -B -b test.output test.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASS\n-----<< Problem 3: >>------\n[2017-02-08 08:45:45.060554] gcc -std=c99 -c mountain.c\nInputs: \nSTDOUT:\n\nSTDERR:\nPASS\n-----<< Problem 3: >>------\n[2017-02-08 08:45:45.160663] /bin/rm -f mountain *.o && make -f g_Makefile mountain\nInputs: \nSTDOUT:\ngcc -o mountain mountain.c -lm\n\nSTDERR:\n\n-----<< Problem 3: >>------\n[2017-02-08 08:45:45.317721] ./mountain\nInputs: 5\n3 2 4 1 5\n\nSTDOUT:\nPlease enter the number of peaks [1-5]: Please enter the peak heights [1-5, single space separated]: \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \n\nSTDERR:\n\nComparing against master output:\n[2017-02-08 08:45:45.361361] diff -y -B -b mountain.output mountain.master\nInputs: \nSTDOUT:\nPlease enter the number of peaks [1-5]: Please enter the peak |\tPlease enter the number of peaks [1-5]: Please enter the heig\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      |\t                      0               0 1 2                 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      |\t    0               0 1 2           0 1 2 3 4               \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      |\t  0 1 2     0     0 1 2 3 4       0 1 2 3 4 5 6             \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      |\t0 1 2 3 4 0 1 2 0 1 2 3 4 5 6 0 0 1 2 3 4 5 6 7 8           \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 \t      <\n\nSTDERR:\n\n-----<< Problem 3: >>------\n[2017-02-08 08:45:45.396822] numdiffs=`diff  -B -b mountain.output mountain.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASS\n-----<< Problem 4: >>------\n[2017-02-08 08:45:45.472302] gcc -std=c99 -c main.c\nInputs: \nSTDOUT:\n\nSTDERR:\nmain.c: In function \xe2\x80\x98main\xe2\x80\x99:\nmain.c:41:49: warning: passing argument 2 of \xe2\x80\x98deallocateNumberTriangle\xe2\x80\x99 from incompatible pointer type [-Wincompatible-pointer-types]\n   deallocateNumberTriangle( (const int) height, triangle );\n                                                 ^\nIn file included from main.c:5:0:\ntriangle.h:17:6: note: expected \xe2\x80\x98int ***\xe2\x80\x99 but argument is of type \xe2\x80\x98int **\xe2\x80\x99\n void deallocateNumberTriangle(const int height, int ***triangle);\n      ^\nPASS\n-----<< Problem 4: >>------\n[2017-02-08 08:45:45.562081] /bin/rm -f main *.o && make -f g_Makefile main\nInputs: \nSTDOUT:\ngcc -c -std=c99 -g triangle1.c\ngcc -c -std=c99 -g triangle2.c\ngcc -c -std=c99 -g main.c\ngcc -o main triangle1.o triangle2.o main.o\n\nSTDERR:\nmain.c: In function \xe2\x80\x98main\xe2\x80\x99:\nmain.c:41:49: warning: passing argument 2 of \xe2\x80\x98deallocateNumberTriangle\xe2\x80\x99 from incompatible pointer type [-Wincompatible-pointer-types]\n   deallocateNumberTriangle( (const int) height, triangle );\n                                                 ^\nIn file included from main.c:5:0:\ntriangle.h:17:6: note: expected \xe2\x80\x98int ***\xe2\x80\x99 but argument is of type \xe2\x80\x98int **\xe2\x80\x99\n void deallocateNumberTriangle(const int height, int ***triangle);\n      ^\n\n-----<< Problem 4: >>------\n[2017-02-08 08:45:45.814931] ./main\nInputs: 3\n\nSTDOUT:\n\nSTDERR:\nSegmentation fault (core dumped)\n\nComparing against master output:\n[2017-02-08 08:45:46.037044] diff -y -B -b main.output main.master\nInputs: \nSTDOUT:\n\t\t\t\t\t\t\t      >\tProblem 1 (a triangle of height 5):\n\t\t\t\t\t\t\t      >\t          0 \n\t\t\t\t\t\t\t      >\t        0 1 2 \n\t\t\t\t\t\t\t      >\t      0 1 2 3 4 \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4 5 6 \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 7 8 \n\t\t\t\t\t\t\t      >\n\t\t\t\t\t\t\t      >\tProblem 2:\n\t\t\t\t\t\t\t      >\tPlease enter the height of the triangle [1-5]:         0     \n\t\t\t\t\t\t\t      >\t      0 1 2     \n\t\t\t\t\t\t\t      >\t    0 1 2 3 4   \n\t\t\t\t\t\t\t      >\t  0 1 2 3 4 5 6 \n\nSTDERR:\n\n-----<< Problem 4: >>------\n[2017-02-08 08:45:46.071087] numdiffs=`diff  -B -b main.output main.master | wc -l`\nInputs: \nSTDOUT:\n\nSTDERR:\nFound 0 differences (within acceptable tolerance)\nPASS', 'name': 'Dibb, Alex J', '1': [5, 0, 5], '3': [15, 0, 15], '2': [10, 0, 10], '5': [0, 0, 0], '2-test': [5, 0, 5], '4': [5, 0, 5]}
+ENDSTUDENT Dibb, Alex J
+
 ====================> Eldemir, Alex C ; 1679
