@@ -175,7 +175,13 @@ bool Board::flank(int i, int j, int di, int dj, color flanker){
         } else {
             // Flank continues!
             flipTile(i, j);
-            return flank(i + di, j + dj, di, dj, flanker);
+            bool result = flank(i + di, j + dj, di, dj, flanker);
+            if (!result){
+                // Flank was bad - reflip tile
+                flipTile(i, j);
+            }
+
+            return result;
         }
     } else {
         // Bad flank (out of bounds), return false
