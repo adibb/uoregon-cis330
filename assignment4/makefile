@@ -1,7 +1,7 @@
 all: reversi.exe
 
 reversi.exe:
-	gcc main.cpp board.cpp -o reversi
+	g++ main.cpp -std=c++11 -g board.cpp -o reversi
 
 clean:
 	rm reversi.exe
