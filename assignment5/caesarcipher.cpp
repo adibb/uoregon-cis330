@@ -6,7 +6,6 @@
 
 #include "cipher.hpp"
 #include "caesarcipher.hpp"
-#include <iostream>
 
 // Default constructor
 CaesarCipher::CaesarCipher()
